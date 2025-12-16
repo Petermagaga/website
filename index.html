@@ -219,7 +219,10 @@
     <section id="hero" class="hero" aria-labelledby="hero-title">
       <div class="container">
         <h1 id="hero-title">Peter Indiazi Magaga</h1>
-        <p>IT Support Specialist & Junior Software Developer — Windows & Linux support, Microsoft 365, ERP support, Django, Flutter, Firebase.</p>
+            <p>
+            Junior Web Developer specializing in backend-driven web applications using
+            Python, Django, REST APIs, and modern frontend technologies.
+            </p>
 
         <div class="cta-group" role="group" aria-label="Primary actions">
           <a class="btn" href="#projects">View Projects</a>
@@ -231,57 +234,120 @@
     <!-- ABOUT -->
     <section id="about" class="container">
       <h2 class="section-title">About Me</h2>
-      <p class="about">Detail-oriented IT Support & Junior Software Developer with hands-on experience in troubleshooting hardware and software issues, Microsoft 365 administration, LAN/WAN networking, ERP support, and backend mobile development using Django & Flutter. I focus on practical solutions, reliable documentation and user-first support.</p>
+      <p class="about">Junior Web Developer building backend-driven web applications with Django, REST APIs, PostgreSQL, and modern frontend technologies.</p>
     </section>
 
     <!-- TECH STACK -->
-<section id="skills" class="container">
-  <h2 class="section-title">Tech & Tools</h2>
+<!-- TECH STACK SECTION -->
+<section id="skills" class="skills-section">
+  <div class="container">
 
-  <div class="stack-logos">
+    <h2 class="section-title">Tech & Tools</h2>
 
-    <div class="stack-item">
-      <i class="devicon-python-plain"></i>
-      <span>Python</span>
-    </div>
+    <div class="tech-stack-grid">
+      <div class="tech-card">
+        <i class="devicon-python-plain"></i>
+        <span>Python</span>
+      </div>
 
-    <div class="stack-item">
-      <i class="devicon-django-plain"></i>
-      <span>Django</span>
-    </div>
+      <div class="tech-card">
+        <i class="devicon-django-plain"></i>
+        <span>Django</span>
+      </div>
 
-    <div class="stack-item">
-      <i class="devicon-flutter-plain"></i>
-      <span>Flutter</span>
-    </div>
+      <div class="tech-card">
+        <i class="devicon-flutter-plain"></i>
+        <span>Flutter</span>
+      </div>
 
-    <div class="stack-item">
-      <i class="devicon-firebase-plain"></i>
-      <span>Firebase</span>
-    </div>
+      <div class="tech-card">
+        <i class="devicon-firebase-plain"></i>
+        <span>Firebase</span>
+      </div>
 
-    <div class="stack-item">
-      <i class="devicon-postgresql-plain"></i>
-      <span>PostgreSQL</span>
-    </div>
+      <div class="tech-card">
+        <i class="devicon-postgresql-plain"></i>
+        <span>PostgreSQL</span>
+      </div>
 
-    <div class="stack-item">
-      <i class="devicon-github-original"></i>
-      <span>GitHub</span>
-    </div>
+      <div class="tech-card">
+        <i class="devicon-github-original"></i>
+        <span>GitHub</span>
+      </div>
 
-    <div class="stack-item">
-      <i class="devicon-windows8-original"></i>
-      <span>Windows</span>
-    </div>
+      <div class="tech-card">
+        <i class="devicon-windows8-original"></i>
+        <span>Windows</span>
+      </div>
 
-    <div class="stack-item">
-      <i class="devicon-linux-plain"></i>
-      <span>Linux</span>
+      <div class="tech-card">
+        <i class="devicon-linux-plain"></i>
+        <span>Linux</span>
+      </div>
     </div>
 
   </div>
 </section>
+
+
+<!-- CORE SKILLS SECTION -->
+<section class="core-skills-section">
+  <div class="container">
+
+    <h2 class="section-title">Core Technical Skills</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3>Backend Development</h3>
+        <ul>
+          <li>Python</li>
+          <li>Django</li>
+          <li>Django REST Framework</li>
+          <li>RESTful API Design</li>
+          <li>JWT Authentication</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Databases</h3>
+        <ul>
+          <li>PostgreSQL</li>
+          <li>Data Modeling</li>
+          <li>Query Optimization</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Frontend Integration</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>API Consumption</li>
+          <li>Responsive UI Integration</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Mobile & Cloud</h3>
+        <ul>
+          <li>Flutter</li>
+          <li>Firebase</li>
+          <li>API-Driven Mobile Apps</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+  </div>
+</section>
+
+
+
 
     </section>
 
@@ -293,7 +359,7 @@
 
         <!-- Project 1 -->
         <article class="project-card" role="button" tabindex="0" aria-pressed="false" onclick="openModal('modal-maternal')" onkeypress="if(event.key==='Enter') openModal('modal-maternal')">
-          <img src="maternal.png" alt="Maternal app screenshot" class="project-thumb" />
+          <img src="/static/img/maternal.png" alt="Maternal app screenshot" class="project-thumb" />
           <div class="project-body">
             <h3>Maternal Health & Motherhood App</h3>
             <p class="muted">Django REST API + Flutter mobile app with JWT & Firebase authentication and cloud data storage.</p>
@@ -305,7 +371,7 @@
 
         <!-- Project 2 -->
         <article class="project-card" role="button" tabindex="0" aria-pressed="false" onclick="openModal('modal-erp-log')" onkeypress="if(event.key==='Enter') openModal('modal-erp-log')">
-          <img src="erp_log.png" alt="ERP logs screenshot" class="project-thumb" />
+          <img src="/static/img/erp_log.png" alt="ERP logs screenshot" class="project-thumb" />
           <div class="project-body">
             <h3>ERP Logging & Support</h3>
             <p class="muted">Backend logging, role-based access and admin panels. Focus on reliability and audit trails for manufacturing workflows.</p>
@@ -317,7 +383,7 @@
 
         <!-- Project 3 -->
         <article class="project-card" role="button" tabindex="0" aria-pressed="false" onclick="openModal('modal-erp-dash')" onkeypress="if(event.key==='Enter') openModal('modal-erp-dash')">
-          <img src="erp_dashboard_.png" alt="ERP dashboard screenshot" class="project-thumb" />
+          <img src="static/img/erp_dashboard_.png" alt="ERP dashboard screenshot" class="project-thumb" />
           <div class="project-body">
             <h3>ERP Dashboard</h3>
             <p class="muted">Dashboard views, reporting and automated statement generation using Django + PostgreSQL.</p>
@@ -326,6 +392,33 @@
             </div>
           </div>
         </article>
+
+
+<!-- Project 4 -->
+        <article class="project-card"
+          role="button"
+          tabindex="0"
+          onclick="openModal('modal-church')"
+          onkeypress="if(event.key==='Enter') openModal('modal-church')">
+
+          <img src="/static/img/church_home.png"
+               alt="Fresh Times Outreach Ministries website"
+               class="project-thumb" />
+
+          <div class="project-body">
+            <h3>Church Website – Fresh Times Outreach Ministries</h3>
+            <p class="muted">
+              Redesigned and improved a church website focusing on clarity,
+              accessibility, responsiveness, and modern UI structure.
+            </p>
+            <div class="project-links">
+              <a href="https://example-church-site-link.com" target="_blank">Live site</a>
+              <a href="https://github.com/petermagaga" target="_blank">View code</a>
+            </div>
+          </div>
+        </article>
+
+
 
       </div>
     </section>
@@ -450,6 +543,39 @@
       </div>
     </div>
   </div>
+
+    <!-- Church Website -->
+    <div class="modal" id="modal-church" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <strong>Fresh Times Outreach Ministries Website</strong>
+          <button class="modal-close" onclick="closeModal('modal-church')">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <img src="/static/img/church_home.png" class="modal-img" alt="Church website homepage" />
+
+          <p class="modal-meta">
+            Church website redesign focused on improving user experience,
+            navigation clarity, mobile responsiveness, and visual hierarchy.
+          </p>
+
+          <ul class="modal-meta">
+            <li>Improved hero section with clear mission & call-to-action</li>
+            <li>Mobile-first responsive layout</li>
+            <li>Cleaner navigation and section flow</li>
+            <li>Optimized images and typography</li>
+          </ul>
+
+          <div style="margin-top:12px; display:flex; gap:10px; justify-content:flex-end">
+            <a class="btn" href="https://example-church-site-link.com" target="_blank">Live Site</a>
+            <a class="btn secondary" href="https://github.com/petermagaga" target="_blank">View Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
   <!-- SCRIPTS: smooth scroll, modals, loader hide -->
   <script>
