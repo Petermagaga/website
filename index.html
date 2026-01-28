@@ -5,226 +5,252 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Peter Magaga | Backend Software Developer</title>
-  <meta name="description" content="Backend-focused software developer building secure, scalable web and mobile systems using Django, REST APIs, and modern cloud-connected frontends.">
-
-  <!-- ================= PERFORMANCE ================= -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="description" content="Backend software developer specializing in secure, scalable APIs, authentication systems, and data-driven platforms using Django and modern cloud tools.">
 
   <!-- ================= FONTS ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- ================= ICONS ================= -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <!-- ================= CSS ================= -->
   <style>
+    /* ================= DESIGN TOKENS ================= */
+    :root {
+      --bg-main:#0B0F14;
+      --bg-card:#121826;
+      --glass:rgba(255,255,255,0.03);
 
-  /* =====================================================
-     1. DESIGN TOKENS
-  ===================================================== */
-  :root {
-    --bg-main:#070707;
-    --bg-card:#111;
-    --glass:rgba(255,255,255,0.04);
-    --accent:#00ffd0;
-    --muted:#bdbdbd;
+      --accent:#4F8CFF;
+      --accent-soft:rgba(79,140,255,0.15);
+      --success:#22C55E;
 
-    --radius-sm:8px;
-    --radius-md:12px;
+      --text-main:#F3F4F6;
+      --text-muted:#9CA3AF;
 
-    --shadow-soft:0 10px 30px rgba(0,0,0,0.6);
-    --max-width:1100px;
-  }
+      --radius-sm:10px;
+      --radius-md:16px;
 
-  /* =====================================================
-     2. RESET & BASE
-  ===================================================== */
-  * { box-sizing:border-box }
-  body {
-    margin:0;
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(180deg,#060606,#081015);
-    color:#f3f3f3;
-    line-height:1.6;
-  }
-  img { max-width:100%; display:block }
-  a { color:inherit; text-decoration:none }
+      --shadow-soft:0 20px 40px rgba(0,0,0,0.55);
+      --max-width:1120px;
+    }
 
-  /* =====================================================
-     3. LAYOUT
-  ===================================================== */
-  .container {
-    max-width:var(--max-width);
-    margin:auto;
-    padding:0 20px;
-  }
-  section { padding:70px 0 }
+    /* ================= RESET ================= */
+    * { box-sizing:border-box }
+    body {
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(180deg,#0B0F14,#0E1623);
+      color:var(--text-main);
+      line-height:1.6;
+    }
+    img { max-width:100%; display:block }
+    a { color:inherit; text-decoration:none }
 
-  /* =====================================================
-     4. NAVBAR
-  ===================================================== */
-  nav {
-    position:fixed;
-    top:14px;
-    left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    gap:18px;
-    padding:10px 20px;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter:blur(10px);
-    border-radius:999px;
-    border:1px solid rgba(0,255,208,0.08);
-    z-index:1000;
-  }
-  nav a {
-    font-weight:600;
-    color:var(--accent);
-    padding:6px 12px;
-    border-radius:999px;
-  }
-  nav a:hover { background:rgba(0,255,208,0.08) }
+    /* ================= LAYOUT ================= */
+    .container {
+      max-width:var(--max-width);
+      margin:auto;
+      padding:0 20px;
+    }
+    section { padding:80px 0 }
 
-  main { padding-top:100px }
+    /* ================= NAV ================= */
+    nav {
+      position:fixed;
+      top:14px;
+      left:50%;
+      transform:translateX(-50%);
+      display:flex;
+      gap:18px;
+      padding:10px 22px;
+      background:rgba(11,15,20,0.75);
+      backdrop-filter:blur(10px);
+      border-radius:999px;
+      border:1px solid rgba(79,140,255,0.15);
+      z-index:1000;
+    }
+    nav a {
+      font-weight:600;
+      color:var(--text-muted);
+      padding:6px 12px;
+      border-radius:999px;
+    }
+    nav a:hover {
+      color:var(--accent);
+      background:var(--accent-soft);
+    }
 
-  /* =====================================================
-     5. HERO
-  ===================================================== */
-  .hero {
-    display:grid;
-    grid-template-columns:1.2fr 0.8fr;
-    gap:40px;
-    align-items:center;
-  }
-  .hero h1 {
-    font-size:2.8rem;
-    margin:0 0 12px;
-  }
-  .hero-subtitle {
-    font-size:1.2rem;
-    color:var(--muted);
-  }
-  .hero-support {
-    margin-top:14px;
-    color:#d9d9d9;
-  }
-  .cta {
-    margin-top:24px;
-    display:flex;
-    gap:14px;
-  }
-  .btn {
-    padding:12px 22px;
-    border-radius:999px;
-    font-weight:700;
-    background:var(--accent);
-    color:#000;
-    box-shadow:0 8px 24px rgba(0,255,208,0.15);
-  }
-  .btn.secondary {
-    background:transparent;
-    color:var(--accent);
-    border:1px solid rgba(0,255,208,0.2);
-  }
+    main { padding-top:120px }
 
-  /* =====================================================
-     6. SECTIONS / TITLES
-  ===================================================== */
-  .section-title {
-    text-align:center;
-    font-size:2rem;
-    margin-bottom:40px;
-  }
+    /* ================= HERO ================= */
+    .hero {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:40px;
+    }
 
-  /* =====================================================
-     7. CAPABILITIES
-  ===================================================== */
-  .capability-grid {
-    display:grid;
-    gap:22px;
-  }
-  @media(min-width:860px){
-    .capability-grid { grid-template-columns:repeat(2,1fr) }
-  }
-  .capability-card {
-    background:var(--glass);
-    padding:24px;
-    border-radius:var(--radius-md);
-    border:1px solid rgba(0,255,208,0.06);
-    box-shadow:var(--shadow-soft);
-  }
-  .capability-card h3 { margin-top:0 }
-  .capability-card span {
-    display:block;
-    margin-top:10px;
-    color:var(--accent);
-    font-size:.95rem;
-  }
+    .hero-badge {
+      display:inline-block;
+      padding:6px 14px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:var(--accent);
+      font-weight:600;
+      margin-bottom:18px;
+    }
 
-  /* =====================================================
-     8. PROJECTS
-  ===================================================== */
-  .projects-grid {
-    display:grid;
-    gap:24px;
-  }
-  @media(min-width:860px){
-    .projects-grid { grid-template-columns:repeat(2,1fr) }
-  }
-  .project-card {
-    background:var(--glass);
-    border-radius:var(--radius-md);
-    overflow:hidden;
-    border:1px solid rgba(0,255,208,0.06);
-    box-shadow:var(--shadow-soft);
-  }
-  .project-body {
-    padding:20px;
-  }
-  .project-body h3 { margin-top:0; color:var(--accent) }
-  .project-impact {
-    margin:14px 0 0;
-    padding-left:18px;
-    color:var(--muted);
-  }
+    .hero h1 {
+      font-size:3rem;
+      line-height:1.15;
+      margin:0 0 16px;
+    }
 
-  /* =====================================================
-     9. CONTACT
-  ===================================================== */
-  form {
-    max-width:600px;
-    margin:auto;
-    background:var(--glass);
-    padding:24px;
-    border-radius:var(--radius-md);
-  }
-  input, textarea {
-    width:100%;
-    padding:12px;
-    margin-bottom:12px;
-    border-radius:8px;
-    border:none;
-    background:#0f0f10;
-    color:#fff;
-  }
+    .hero-subtitle {
+      font-size:1.15rem;
+      color:var(--text-muted);
+      max-width:680px;
+    }
 
-  /* =====================================================
-     10. FOOTER
-  ===================================================== */
-  footer {
-    padding:50px 20px;
-    border-top:1px solid rgba(0,255,208,0.06);
-    text-align:center;
-    color:var(--muted);
-  }
+    .hero-support {
+      margin-top:14px;
+      color:#D1D5DB;
+      max-width:650px;
+    }
 
+    .hero-metrics {
+      margin-top:22px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      color:var(--text-muted);
+      font-size:.95rem;
+    }
+
+    .cta {
+      margin-top:28px;
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .btn {
+      padding:13px 26px;
+      border-radius:999px;
+      font-weight:700;
+      background:var(--accent);
+      color:#0B0F14;
+      box-shadow:0 10px 28px rgba(79,140,255,0.35);
+    }
+
+    .btn.secondary {
+      background:transparent;
+      color:var(--accent);
+      border:1px solid rgba(79,140,255,0.35);
+    }
+
+    /* ================= TITLES ================= */
+    .section-title {
+      text-align:center;
+      font-size:2.2rem;
+      margin-bottom:48px;
+    }
+
+    /* ================= CAPABILITIES ================= */
+    .capability-grid {
+      display:grid;
+      gap:26px;
+    }
+    @media(min-width:900px){
+      .capability-grid { grid-template-columns:repeat(2,1fr) }
+    }
+
+    .capability-card {
+      background:var(--glass);
+      padding:28px;
+      border-radius:var(--radius-md);
+      border:1px solid rgba(79,140,255,0.12);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .capability-card h3 { margin-top:0 }
+    .capability-card span {
+      display:block;
+      margin-top:12px;
+      color:var(--accent);
+      font-size:.95rem;
+      font-weight:600;
+    }
+
+    /* ================= PROJECTS ================= */
+    .projects-grid {
+      display:grid;
+      gap:26px;
+    }
+    @media(min-width:900px){
+      .projects-grid { grid-template-columns:repeat(2,1fr) }
+    }
+
+    .project-card {
+      background:var(--glass);
+      border-radius:var(--radius-md);
+      overflow:hidden;
+      border:1px solid rgba(79,140,255,0.12);
+      box-shadow:var(--shadow-soft);
+      transition:transform .3s ease;
+    }
+
+    .project-card:hover {
+      transform:translateY(-6px);
+    }
+
+    .project-body {
+      padding:22px;
+    }
+
+    .project-body h3 {
+      margin-top:0;
+      color:var(--accent);
+    }
+
+    .project-impact {
+      margin:14px 0 0;
+      padding-left:18px;
+      color:var(--text-muted);
+    }
+
+    /* ================= CONTACT ================= */
+    form {
+      max-width:620px;
+      margin:auto;
+      background:var(--glass);
+      padding:28px;
+      border-radius:var(--radius-md);
+      border:1px solid rgba(79,140,255,0.12);
+    }
+
+    input, textarea {
+      width:100%;
+      padding:13px;
+      margin-bottom:14px;
+      border-radius:10px;
+      border:none;
+      background:#0F172A;
+      color:#fff;
+      font-family:inherit;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      padding:50px 20px;
+      border-top:1px solid rgba(79,140,255,0.12);
+      text-align:center;
+      color:var(--text-muted);
+    }
   </style>
 </head>
 
 <body>
 
-<!-- ================= NAV ================= -->
 <nav>
   <a href="#home">Home</a>
   <a href="#capabilities">Capabilities</a>
@@ -234,18 +260,30 @@
 
 <main>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section id="home" class="container hero">
   <div>
-    <h1>Peter Indiazi Magaga</h1>
+    <span class="hero-badge">Backend Software Developer</span>
+
+    <h1>Building reliable backend systems<br>that scale in the real world</h1>
+
     <p class="hero-subtitle">
-      Backend-focused Software Developer building secure, scalable web
-      and mobile systems using Django, REST APIs, and cloud-connected frontends.
+      I design and build secure APIs, authentication systems,
+      and data-driven platforms using Django, REST APIs,
+      and cloud-connected architectures.
     </p>
+
     <p class="hero-support">
-      I design reliable backend architectures, authentication systems,
-      and data-driven applications for real-world business use cases.
+      Focused on performance, security, and long-term maintainability —
+      not just “making it work”.
     </p>
+
+    <div class="hero-metrics">
+      <span>✔ API-first systems</span>
+      <span>✔ Secure authentication</span>
+      <span>✔ Mobile & web integration</span>
+    </div>
+
     <div class="cta">
       <a class="btn" href="#projects">View Projects</a>
       <a class="btn secondary" href="static/files/cv.pdf" download>Download CV</a>
@@ -253,73 +291,69 @@
   </div>
 </section>
 
-<!-- ================= CAPABILITIES ================= -->
+<!-- CAPABILITIES -->
 <section id="capabilities">
   <div class="container">
     <h2 class="section-title">Core Capabilities</h2>
 
     <div class="capability-grid">
       <div class="capability-card">
-        <h3>Backend Systems</h3>
-        <p>Secure API development, authentication workflows, scalable architecture.</p>
+        <h3>Backend Architecture</h3>
+        <p>Design and implementation of secure, scalable backend systems built for production.</p>
         <span>Django • DRF • JWT • PostgreSQL</span>
       </div>
 
       <div class="capability-card">
         <h3>Data & Reliability</h3>
-        <p>Structured data modeling, logging, reporting and audit trails.</p>
-        <span>PostgreSQL • Logging • Optimization</span>
+        <p>Data modeling, audit trails, logging, and performance optimization.</p>
+        <span>PostgreSQL • Reporting • Optimization</span>
       </div>
 
       <div class="capability-card">
-        <h3>Frontend & Mobile Integration</h3>
-        <p>API-driven UI integration and mobile-first application development.</p>
+        <h3>API Integration</h3>
+        <p>API-driven frontend and mobile application integrations.</p>
         <span>HTML • CSS • JavaScript • Flutter</span>
       </div>
 
       <div class="capability-card">
         <h3>Cloud & Tooling</h3>
-        <p>Version control, deployment workflows and cloud-connected apps.</p>
+        <p>Deployment workflows, version control, and cloud-connected systems.</p>
         <span>GitHub • Firebase • Linux</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="container">
     <h2 class="section-title">Selected Projects</h2>
 
     <div class="projects-grid">
       <div class="project-card">
-        <img src="static/img/maternal.png" loading="lazy" alt="Maternal Health App">
+        <img src="static/img/maternal.png" alt="Maternal Health Platform">
         <div class="project-body">
           <h3>Maternal Health Platform</h3>
-          <p>
-            Secure, API-driven maternal health system designed
-            for mobile users and reliable data handling.
-          </p>
+          <p>Secure API-driven maternal health system designed for mobile-first usage.</p>
           <ul class="project-impact">
-            <li>REST API with Django & DRF</li>
+            <li>Django REST API architecture</li>
             <li>JWT + Firebase authentication</li>
-            <li>Flutter mobile integration</li>
+            <li>Optimized PostgreSQL queries</li>
+            <li><strong>Outcome:</strong> Reliable multi-device data sync</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card">
-        <img src="static/img/erp_dashboard_.png" loading="lazy" alt="ERP Dashboard">
+        <img src="static/img/erp_dashboard_.png" alt="ERP Dashboard">
         <div class="project-body">
-          <h3>ERP Logging & Dashboard System</h3>
-          <p>
-            Backend logging and operational dashboards improving traceability
-            and issue resolution in ERP workflows.
-          </p>
+          <h3>ERP Logging & Dashboard</h3>
+          <p>Backend logging and reporting infrastructure for ERP workflows.</p>
           <ul class="project-impact">
             <li>Role-based access control</li>
             <li>Audit trails & reporting</li>
-            <li>PostgreSQL optimization</li>
+            <li>Database performance tuning</li>
+            <li><strong>Outcome:</strong> Improved traceability & issue resolution</li>
           </ul>
         </div>
       </div>
@@ -327,7 +361,7 @@
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <h2 class="section-title">Contact</h2>
